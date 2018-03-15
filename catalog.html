@@ -6,13 +6,12 @@
    </head>
    <body>
      <header class="main-header">
-     <a class="main-logo"
-     <img src="http://placehold.it" width="150" height="100">
-     </a>
      <nav class="main-nav">
      <ul class="main-list">
      <li><a href="info.html"> Информация</a></li>
      <li><a href="foto.html"> Фото и видео </a></li>
+     <a class="main-logo">
+     <img src="http://placehold.it" width="150" height="100">
      <li><a href="map.html"> Карта штата </a></li>
      <li><a href="hotel.html"> Гостиницы </a></li>
      </ul>
@@ -41,49 +40,104 @@
                             <td>до 3000</td>
                         </tr>
                     </table>
+                </li>
                     <span>неизвестный элемент</span><br>
                     <input type="submit" value="показать">
-                 <header class="find-header">
-                     <div class="find-header">найдено <!--как считать?-->
-                     </div>
+                    <section>
+                     <div class="sort">
+                        <h2>найдено</h2> <!--как считать?-->
                      <p>сортировка:</p>
                      <ul>
                          <li><a href="#" class="button">по цене</a> </li>
                          <li><a href="#" class="button">по типу</a></li>
                          <li><a href="#" class="button">по рейтингу</a>
                          </li>
-                     </ul>
-                     <label>
-                         <input type="radio" name="up">вверх
-                        <input type="radio" name="down">вниз
-                     </label>
-                 </header>
-                 <ul>
-                     <li><img src="pictures">
-                        <h2>amara resort(&)spa</h2><br>
-                        <p>гостиница</p> <p>от 4000р.</p>
-                         <a href="#" class="button"> подробнее</a>
-                         <a href="#" class="button"> забронировать</a>
-                         <div>4 звезды</div>
-                         <div>рейтинг:8,5</div>
-                         </li>
-                         <li><img src="pictures">
-                        <h2>desert quial inn</h2><br>
-                        <p>мотель</p> <p>от 3000р.</p>
-                         <a href="#" class="button"> подробнее</a>
-                         <a href="#" class="button"> забронировать</a>
-                         <div>3 звезды</div>
-                         <div>рейтинг:8,9</div>
-                         </li>
-                         <li><img src="pictures">
-                        <h2>villas at poco diablo</h2><br>
-                        <p>апартаменты</p> <p>от 2000р.</p>
-                         <a href="#" class="button"> подробнее</a>
-                         <a href="#" class="button"> забронировать</a>
-                         <div>2 звезды</div>
-                         <div>рейтинг:9,2</div>
-                         </li>
-                 </ul>
+                         <li><a href="#" class="up"><img src="up"></a></li>
+                      <li>  <a href="#" class="down"><img src="down"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="view">
+                <div class="hotel">
+                    <div class="hotel.img">
+                        <img src="hotel-foto">
+                    </div>
+                        <div class="hotel-text">
+                            <div class="hotel-text-left">
+                                <h3>
+                                    amara resort & spa
+                                </h3>
+                                <p>
+                                    гостиница
+                                </p>
+                                <p>
+                                    от 4000р
+                                </p>
+                                <a href="#" class="moreinfo">подробнее</a>
+                                <a href="#" class="reserv"> забронировать</a>
+                            </div>
+                            <div class="hotel-text-right">
+                                <ul>
+                                    <li>4 звезды</li>
+                                    <li>рейтинг:8,5</li>
+                                </ul>
+                            </div>                       
+                    </div>                    
+                </div>
+                 <div class="hotel">
+                    <div class="hotel.img">
+                        <img src="hotel-foto">
+                    </div>
+                        <div class="hotel-text">
+                            <div class="hotel-text-left">
+                                <h3>
+                                    desert quail inn
+                                </h3>
+                                <p>
+                                    мотель
+                                </p>
+                                <p>
+                                    от 3000р
+                                </p>
+                                <a href="#" class="moreinfo">подробнее</a>
+                                <a href="#" class="reserv"> забронировать</a>
+                            </div>
+                            <div class="hotel-text-right">
+                                <ul>
+                                    <li>3 звезды</li>
+                                    <li>рейтинг:8,9</li>
+                                </ul>
+                            </div>                       
+                    </div>                    
+                </div>
+                 <div class="hotel">
+                    <div class="hotel.img">
+                        <img src="hotel-foto">
+                    </div>
+                        <div class="hotel-text">
+                            <div class="hotel-text-left">
+                                <h3>
+                                    villas at poco diablo
+                                </h3>
+                                <p>
+                                    апартаменты
+                                </p>
+                                <p>
+                                    от 2000р
+                                </p>
+                                <a href="#" class="moreinfo">подробнее</a>
+                                <a href="#" class="reserv"> забронировать</a>
+                            </div>
+                            <div class="hotel-text-right">
+                                <ul>
+                                    <li>2 звезды</li>
+                                    <li>рейтинг:9,2</li>
+                                </ul>
+                            </div>                       
+                    </div>                    
+                </div>
+            </div>
+            
      </main>
           <footer class="main-footer">
      <p>#visitsedona</p>
@@ -94,7 +148,7 @@
      <li> <a href="#" class="social-button"> ютуб </a></li>
      </ul>
      </div>
-     <div class="html-logo"
+     <div class="html-logo">
      <a class="html-img">
      <img src="#" width="100" height="200">
      </a>
