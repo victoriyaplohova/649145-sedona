@@ -66,26 +66,68 @@
      большинство едет в гранд каньон и толпится там</li>
      </ul>
      <section class="apointment">
-     <p> заинтересовались?<p>
-     <p> укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне<p>
+     <h2> заинтересовались?</h2>
+     <p class="apointment-info"> укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне<p>
      <a href="#" class="find-hostel">
          поиск гостиницы в седоне
      </a>
-     <!--здесь будут формы-->
-     <img src="img/map.jpg" width="1400" height="700">
+     <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+         <p class="appointment-item">
+             <label for="appointment-arrival-date">
+                 Дата заезда
+             </label>
+             <input type="text" name="arrival-date" id="appointment-arrival-date" value="" placeholder="24 апреля 2017">
+         </p>
+         <p class="appointment-item">
+             <label for="appointment-departure-date">
+                 Дата выезда
+             </label>
+             <input type="text" name="departure-date" id="appointment-departure-date" value="" placeholder="4 июля 2017">
+         </p>
+         <p>
+         <label for="adults-quantli">
+            Взрослые 
+         </label>
+         <button type="button" aria-label="меньше">
+             -
+         </button>
+         <input type="text" name="quantli" id="adults-quantli" placeholder="2">
+         <button type="button" aria-label="больше">
+             +
+         </button>
+</p>
+<p>
+    <label for="children-quantli">
+        Дети
+    </label>
+        <button type="button" aria-label="меньше">
+             -
+         </button>
+         <input type="text" name="quantli" id="children-quantli" placeholder="0">
+         <button type="button" aria-label="больше">
+             +
+         </button><br>
+         <button type="submit">
+             Найти
+         </button>
+    
+</p>
+
+     </form>
+     <img src="img/map.jpg" width="1400" height="700" alt="Карта">
      </section>
      </main>
      <footer class="main-footer">
      <p>#visitsedona</p>
      <div class="footer-social">
      <ul>
-     <li> <a href="#" class="social-button">
+     <li> <a href="#" class="social-button" aria-label="твиттер">
         <img src="img/twitter.svg">
        </a></li>
-     <li> <a href="#" class="social-button"> 
+     <li> <a href="#" class="social-button" aria-label="фейсбук"> 
       <img src="img/fb-icon.svg">
       </a></li>
-     <li> <a href="#" class="social-button"> 
+     <li> <a href="#" class="social-button" aria-label="ютуб"> 
         <img src="youtube.svg">
       </a></li>
      </ul>
