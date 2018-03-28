@@ -1,3 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.col-4 { flex-basis: 33.3333% }
+.col-8 { flex-basis: 66.6666% }
+
 body {
   margin: 0;
   padding: 0;
@@ -8,15 +35,21 @@ body {
   font-size: 14px;
   color: black;
   text-transform: uppercase;
-
-  background-color: white;
-  background-image: url("img/Shape1.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
+  
 }
+
 
 .header-nav {
   background-color: white;
+  height: 56px;
+}
+
+/*.header-nav .row {
+  justify-content: space-between;
+}*/
+
+.header-nav .row div {
+  width: 20%;
 }
 
 .header-nav a {
@@ -24,14 +57,34 @@ body {
   color: black;
 }
 
-.motto div {
+
+.sedona-ass {
+  height: 591px;
+  background-image: url("img/mountains.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 1200px 510px;
+}
+
+.sedona-ass img {
+  padding-top: 78px;
+}
+
+.sedona-info {
+  font-size: 14px;
+  height: 216px;
+  width: 1200px;
+}
+
+
+/*.motto div {
   background-color: white;
   background-size: 1200px 216px;
   text-align: center;
-}
+}*/
 
-.container {
-  text-align: center;
+.cards .row {
+  align-items: center;
 }
 
 .block {
@@ -39,8 +92,20 @@ body {
   background-color: #81b3d2;
 }
 
-.down {
+/*.down {
   background-color: #eee;
+}*/
+
+.reason {
+  background-color: #81b3d2;
+  height: 256px;
+  color: white;
+
+}
+
+.pisos {
+  background-color: red;
+  height: 256px;
 }
 
 .apointment {
@@ -94,6 +159,17 @@ footer {
   height: 120px;
 }
 
+.main-footer .row {
+  justify-content: space-between;
+}
+
+.html-logo .row {
+  justify-content: center;
+}
+
+.footer-social .row {
+  justify-content: center;
+}
 
 .twitter,
 .facebook,
@@ -107,4 +183,6 @@ footer {
   line-height: 48px;
 }
 
-
+.peni {
+  height: 330px;
+}
