@@ -22,69 +22,85 @@ html {
   align-items: center;
 }
 
-.col-4 { flex-basis: 33.3333% }
-.col-8 { flex-basis: 66.6666% }
+
+.col-4 { flex-basis: 33.3333%; }
+.col-8 { flex-basis: 66.6666%; }
+
 
 body {
   margin: 0;
   padding: 0;
-
   font-family: "PT Sans", Arial, sans-serif;
-  line-height: 21px;
-  font-weight: bold;
   font-size: 14px;
+  line-height: 21px;
   color: black;
   text-transform: uppercase;
-  
 }
 
+p:first-child {
+  margin: 0;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+/* Navigation bar */
 
 .header-nav {
   background-color: white;
   height: 56px;
 }
 
-/*.header-nav .row {
-  justify-content: space-between;
-}*/
-
 .header-nav .row div {
+  margin-bottom: 22px;
+}
+
+.header-nav .row div,span {
   width: 20%;
 }
 
 .header-nav a {
-  text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
+.header-nav a:hover {
+  color: #89b8d5;
+}
 
-.sedona-ass {
-  height: 591px;
+.header-nav a:active {
+  color: #b2b2b2;
+}
+
+/*.header-nav a:visited {
+  color: #7f6d62;
+}*/
+
+
+/* Motto */
+
+.motto-view {
+  height: 510px;
   background-image: url("img/mountains.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 1200px 510px;
 }
 
-.sedona-ass img {
+.motto-view img {
   padding-top: 78px;
 }
 
-.sedona-info {
-  font-size: 14px;
+.motto-info {
+  padding-top: 65px;
   height: 216px;
-  width: 1200px;
+  background-color: white;
 }
 
-
-/*.motto div {
-  background-color: white;
-  background-size: 1200px 216px;
-  text-align: center;
-}*/
+/* Cards */
 
 .cards .row {
-  align-items: center;
+  align-items: flex-start;
 }
 
 .block {
@@ -92,60 +108,167 @@ body {
   background-color: #81b3d2;
 }
 
-/*.down {
-  background-color: #eee;
-}*/
 
 .reason {
+  height: 256px;
+  padding-top: 50px;
+  background-color: #eee;
+}
+
+.marked {
   background-color: #81b3d2;
-  height: 256px;
   color: white;
-
 }
 
-.pisos {
-  background-color: red;
+
+.reason-view img {
   height: 256px;
+  width: 800px;
 }
 
-.apointment {
-  text-align: center;
+.props {
+  padding-top: 60px;
+  height: 330px;
 }
+
+.props p:nth-child(2) {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.another-reason {
+  background-color: #eee;
+  height: 256px;
+  margin-top: -29px;
+  padding-top: 60px;
+}
+
+
+/* Interest */
+.interest {
+  background-color: white;
+  padding-top: 60px;
+}
+
+.interest p:first-child {
+  font-size: 28px;
+}
+
+.interest p:last-child {
+  margin: 40px 0 55px;
+}
+
+/* Booking */
+
+.booking {
+  width: 568px;
+/*  margin-left: auto;
+  margin-right: auto;*/
+  font-weight: bold;
+  text-align: left;
+}
+
+
+form {
+  padding: 55px;
+  padding-top: 45px;
+  background-color: white;
+  box-shadow: 0 5px 5px 5px rgba(0,0,0,0.1);
+  /*display: none;*/
+}
+
+
 
 .find {
   width: 568px;
-  height: 86px;
   background-color: #766357;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .find a{
   color: white;
+  font-size: 21px;
   line-height: 86px;
 }
 
-.appointment-item {
+/* Forma */
+
+.data {
   background-size: 568px 395px;
 }
 
-.appointment-item input {
+.data-in, .data-out, .members, .adults, .children {
+  display: flex;
+  align-items: flex-end;
+}
+
+.data-in label, .data-out label, .adults label {
+  display: inline-block;
+  width: 112px;
+  line-height: 38px;
+}
+
+.data-in, .data-out {
+  padding: 15px 0;
+}
+.members {
+  padding: 15px 0 55px;
+ }
+
+.data-in input, .data-out input {
   background-color: #f2f2f2;
   width: 346px;
   height: 38px;
+  border: none;
 }
 
-.appointment-item2 input {
+.data-in input::-webkit-input-placeholder,
+.data-out input::-webkit-input-placeholder
+ {
+  font-weight: bold;
+  color: black;
+  padding-left: 15px;
+  text-transform: uppercase;
+
+}
+
+
+.children label {
+  display: inline-block;
+  width: 118px;
+  line-height: 38px;
+  text-align: center;
+}
+
+
+
+.members input {
   background-color: #f2f2f2;
   width: 38px;
   height: 38px;
+  padding: 0;
+  border: none;
+  text-align: center;
 }
 
-.appointment-item2 button {
+.members input::-webkit-input-placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+.members button {
   background-color: #f2f2f2;
   width: 38px;
   height: 38px;
+  padding: 0;
+  border: none;
+  color: #a9a9a9;
+  font-weight: bold;
 }
 
-.appointment-item2 .submit {
+.submit {
   background-color: #81b3d2;
   color: white;
   width: 458px;
@@ -153,14 +276,45 @@ body {
   text-align: top center;
 }
 
-footer {
-  background-color: white;
-  width: 1200px;
+.submit p {
+  font-size: 21px:
+  line-height 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.booking {
+  position: absolute;
+}
+
+.booking form{
+  position: relative;
+  z-index: 2;
+  left: 316px;
+}
+
+.map {
+  height: 594px;
+  background-image: url("img/map.jpg");
+  z-index: 1;
+}
+
+
+/* Footer */
+
+.main-footer {
+  background-color: rgba(255,255,255, 0.5);
+  width: 100%;
   height: 120px;
+  margin-top: 40px;
+  z-index: 2;
+  margin-top: -120px;
 }
 
 .main-footer .row {
   justify-content: space-between;
+  height: 120px;
+  align-items: center;
 }
 
 .html-logo .row {
@@ -177,12 +331,9 @@ footer {
   width: 46px;
   height: 48px;
   background-color: #81b3d2;
-  margin: 3px;
+  margin: 0 3px;
   text-align: center;
   position: relative;
   line-height: 48px;
 }
 
-.peni {
-  height: 330px;
-}

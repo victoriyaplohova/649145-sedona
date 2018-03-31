@@ -1,53 +1,273 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+input[type="checkbox"] {
+  display: none;
+  background: none;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.col-4 { flex-basis: 33.3333%; }
+.col-8 { flex-basis: 66.6666%; }
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
 body {
   margin: 0;
   padding: 0;
-
   font-family: "PT Sans", Arial, sans-serif;
-  line-height: 21px;
-  font-weight: bold;
   font-size: 14px;
+  line-height: 21px;
   color: black;
   text-transform: uppercase;
-
-  background-color: white;
-  background-image: url("img/bakground-catalog.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
-.header-nav{
+/*** Navigation bar ***/
+
+.header-nav {
   background-color: white;
+  height: 56px;
 }
+
+.header-nav .row div {
+  margin-bottom: 22px;
+}
+
+.header-nav .row div,span {
+  width: 20%;
+}
+
 .header-nav a {
-  text-decoration: none;
   color: black;
+  font-weight: bold;
 }
-section {
-  background-color: white;
+
+.header-nav a:hover {
+  color: #89b8d5;
 }
-.price a{
+
+.header-nav a:active {
+  color: #b2b2b2;
+}
+
+/*.header-nav a:visited {
+  color: #7f6d62;
+}*/
+
+/****************/
+
+/**** Filter ****/
+
+.filter .row {
+  align-items: flex-start;
+  background: url(img/background-catalog.jpg) 100% no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+
+.filter-infstructure {
+  margin-left: 70px;
+}
+
+.filter-flat {
+}
+
+.filter-value {
+  margin-right: 70px;
+}
+ .show input {
+  border: 1px solid white;
+  height: 32px;
+  width: 132px;
+ /* display: flex;*/
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  
+}
+
+input[type="checkbox"] + label span{
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background-image: url(img/checkbox-off.svg);
+  background-size: cover;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked + label span{
+  display: inline-block;
+  width: 27px;
+  height: 23px;
+  background-image: url(img/checkbox-on.svg);
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.col div {
+  padding: 11px 0;
+}
+
+.value-from-to {
+  border: 1px solid white;
+  height: 32px;
+  width: 314px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.value-from, .value-to {
+  /*display: inline-block;*/
+  width: 50%;
+}
+
+.value-per-day .range {
+  width: 314px;
+}
+
+/****************/
+
+.find-header {
+  padding: 30px 0;
+}
+
+.find {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.sort-params {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 70px;
+}
+
+.sort-params div{
+  margin: 0;
+}
+
+.sort-by p{
+  margin-left: 50px;
+}
+
+.by-price a{
   color: #81b3d2;
   font-size: 12px;
+  margin-left: 40px;
 }
-.type a{
+.by-type a{
   color: #e1e1e1;
   font-size: 12px;
   text-decoration: underline;
   text-decoration-style: dotted; 
   text-decoration-color: #81b3d2;
+  margin-left: 30px;
 }
-.rating a{
+.by-rating a{
   color: #e1e1e1;
   font-size: 12px;
   text-decoration: underline;
   text-decoration-style: dotted; 
   text-decoration-color: #81b3d2;
+  margin-left: 30px;
 }
-.moreinfo{
+
+.sort-view {
+  margin-right: 70px;
+}
+
+/*************************/
+
+.card {
+  padding: 33px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.card:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+
+.hotel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; 
+  margin-left: 70px;
+
+}
+
+.hotel-text{
+  height: 90px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.hotel-view{
+  height: 90px;
+  width: 135px;
+}
+
+.hotel-text p {
+  margin: 0;
+}
+
+
+.hotel-text p:first-child {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+
+.hotel-text span {
+  text-align: left;
+  display: inline-block;
+  width: 120px;
+}
+
+.moreinfo, .reserv {
+  display: inline-block;
+}
+
+
+.moreinfo {
   width: 110px;
   height: 27px;
   background-color: #81b3d2;
   text-align: center;
+
 }
 .moreinfo a{
   line-height: 27px;
@@ -56,19 +276,70 @@ section {
 .reserv {
   width: 142px;
   height: 27px;
+  margin-left: 8px;
   background-color: #766357;
   text-align: center;
 }
 .reserv a{
   line-height: 27px;
-color: white;
-}
-footer {
-  background-color: white;
-/*  width: 1200px;
-  height: 120px;*/
+  color: white;
 }
 
+.rating {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-right: 70px;
+}
+
+.rating-4 div {
+  width: 72px;     /*=18px*rating*/
+}
+
+.rating-3 div {
+  width: 54px;
+}
+
+.rating-2 div {
+  width: 36px;
+}
+
+.rating div:first-child {
+  background: url(img/star.svg) repeat-x;   
+  color: white;
+}
+
+.rating div:last-child {
+  width: 110px;
+  height: 27px;
+  line-height: 27px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+/***** Footer *******/
+
+.main-footer {
+  background-color: rgba(255,255,255, 0.5);
+  width: 100%;
+  height: 120px;
+}
+
+.main-footer .row {
+  justify-content: space-between;
+  height: 120px;
+  align-items: center;
+}
+
+.html-logo .row {
+  justify-content: center;
+}
+
+.footer-social .row {
+  justify-content: center;
+}
 
 .twitter,
 .facebook,
@@ -76,10 +347,9 @@ footer {
   width: 46px;
   height: 48px;
   background-color: #81b3d2;
-  margin: 3px;
+  margin: 0 3px;
   text-align: center;
   position: relative;
   line-height: 48px;
 }
-
 
