@@ -87,7 +87,7 @@ body {
 
 .filter .row {
   align-items: flex-start;
-  background: url(img/background-catalog.jpg) 100% no-repeat;
+  background: url(img/bakground-catalog.jpg) 100% no-repeat;
   background-size: cover;
   color: white;
 }
@@ -103,15 +103,7 @@ body {
 .filter-value {
   margin-right: 70px;
 }
- .show input {
-  border: 1px solid white;
-  height: 32px;
-  width: 132px;
- /* display: flex;*/
-  flex-direction: row;
-  color: white;
-  align-items: center;
-  
+
 }
 
 input[type="checkbox"] + label span{
@@ -153,6 +145,20 @@ input[type="checkbox"]:checked + label span{
 .value-per-day .range {
   width: 314px;
 }
+.value-per-day span {
+  font-size: 22px;
+}
+.show-results {
+  display: inline-block;
+  height: 32px;
+  width: 133px;
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid white;
+  color: white;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
 
 /****************/
 
@@ -185,6 +191,12 @@ input[type="checkbox"]:checked + label span{
   font-size: 12px;
   margin-left: 40px;
 }
+.by-rating a:hover{
+  color: #81b3d2
+}
+.by-rating a:active{
+  color: black;
+}
 .by-type a{
   color: #e1e1e1;
   font-size: 12px;
@@ -192,6 +204,12 @@ input[type="checkbox"]:checked + label span{
   text-decoration-style: dotted; 
   text-decoration-color: #81b3d2;
   margin-left: 30px;
+}
+.by-type a:hover{
+  color: #81b3d2
+}
+.by-type a:active{
+  color: black;
 }
 .by-rating a{
   color: #e1e1e1;
@@ -256,6 +274,12 @@ input[type="checkbox"]:checked + label span{
   display: inline-block;
   width: 120px;
 }
+.hotel-text p:first-child:hover{
+  color: #81b3d2;
+}
+.hotel-text p:first-child:active{
+color: #cacaca;
+}
 
 .moreinfo, .reserv {
   display: inline-block;
@@ -273,13 +297,32 @@ input[type="checkbox"]:checked + label span{
   line-height: 27px;
   color: white;
 }
+.moreinfo:hover{
+  background-color: #669ec0;
+}
+.moreinfo:active{
+  background-color: #5496bd;
+}
+.moreinfo a:active{
+  color: #94b9d2;
+}
 .reserv {
   width: 142px;
   height: 27px;
   margin-left: 8px;
   background-color: #766357;
   text-align: center;
+} 
+.reserv:hover{
+  background-color: #604e43;
 }
+.reserv:active{
+  background-color: #503e33;
+}
+.reserv a:active{
+  color: #928a85;
+}
+
 .reserv a{
   line-height: 27px;
   color: white;
@@ -339,8 +382,35 @@ input[type="checkbox"]:checked + label span{
 
 .footer-social .row {
   justify-content: center;
+  align-items: center;
 }
-
+.footer-social .twitter:hover{
+  background-color: #669ec0;
+}
+.footer-social .twitter:active{
+  background-color: #5496bd;
+}
+.social-button .twitter:active{
+ background-image: url(img/twitter.2svg.svg); 
+}
+.footer-social .facebook:hover{
+  background-color: #669ec0;
+}
+.footer-social .facebook:active{
+  background-color: #5496bd;
+}
+.footer-social .facebook:active{
+  background-image: url(img/fb-icon2.svg);
+}
+.footer-social .youtube:hover{
+  background-color: #669ec0;
+}
+.footer-social .youtube:active{
+  background-color: #5496bd;
+}
+.footer-social .youtube:active{
+  background-image: url(img/youtube2.svg);
+}
 .twitter,
 .facebook,
 .youtube {
@@ -351,5 +421,5 @@ input[type="checkbox"]:checked + label span{
   text-align: center;
   position: relative;
   line-height: 48px;
-}
 
+}

@@ -192,6 +192,15 @@ form {
   font-size: 21px;
   line-height: 86px;
 }
+.find:hover{
+  background-color: #604e43;
+}
+.find:active{
+  background-color: #503e33;
+}
+.find a:active{
+  color: #928a85;
+}
 
 /* Forma */
 
@@ -217,21 +226,22 @@ form {
   padding: 15px 0 55px;
  }
 
-.data-in input, .data-out input {
+.data-in input[type="text"], .data-out input[type="text"] {
   background-color: #f2f2f2;
-  width: 346px;
+  width: 309px;
   height: 38px;
   border: none;
 }
 
-.data-in input::-webkit-input-placeholder,
-.data-out input::-webkit-input-placeholder
- {
-  font-weight: bold;
-  color: black;
-  padding-left: 15px;
-  text-transform: uppercase;
-
+.data-in input[type="button"], .data-out input[type="button"] {
+  background-image: url("img/calendar.svg");
+  background-color: #f2f2f2;
+  background-size: 22px 21px;
+  width: 21px;
+  height: 22px;
+  margin: 8px;
+  /*padding: 8px;*/
+  border: none;
 }
 
 
@@ -282,7 +292,15 @@ form {
   font-weight: 500;
   text-transform: uppercase;
 }
-
+.submit:hover{
+  background-color: #669ec0;
+}
+.submit:active{
+  background-color: #5496bd;
+}
+.submit p:active{
+  color: #85b0cd;
+}
 .booking {
   position: absolute;
 }
@@ -324,7 +342,33 @@ form {
 .footer-social .row {
   justify-content: center;
 }
-
+.footer-social .twitter:hover{
+  background-color: #669ec0;
+}
+.footer-social .twitter:active{
+  background-color: #5496bd;
+}
+.social-button .twitter:active{
+ background-image: url(img/twitter.2svg.svg); 
+}
+.footer-social .facebook:hover{
+  background-color: #669ec0;
+}
+.footer-social .facebook:active{
+  background-color: #5496bd;
+}
+.footer-social .facebook:active{
+  background-image: url(img/fb-icon2.svg);
+}
+.footer-social .youtube:hover{
+  background-color: #669ec0;
+}
+.footer-social .youtube:active{
+  background-color: #5496bd;
+}
+.footer-social .youtube:active{
+  background-image: url(img/youtube2.svg);
+}
 .twitter,
 .facebook,
 .youtube {
@@ -335,5 +379,6 @@ form {
   text-align: center;
   position: relative;
   line-height: 48px;
+
 }
 
